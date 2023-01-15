@@ -2,21 +2,22 @@ var wins = 0;
 var ties = 0;
 var losses = 0;
 
-var options = ["r", "p", "s"];
+var options = ["R", "P", "S"];
 
 var playGame = function() {
     var userChoice = window.prompt("Enter R, P, or S");
 
+    userChoice = userChoice.toUpperCase();
 
 if (!userChoice) {
     return;
 } 
 
-if (userChoice != "r" && userChoice != "p" && userChoice != "s") {
+if (userChoice != "R" && userChoice != "P" && userChoice != "S") {
     window.alert("Please enter a valid option:\n'r' for Rock, 'p' for Paper, or 's' for Scissors.\nLetters are not case sensitive.");
+    return;
 }
 
-userChoice = userChoice.toUpperCase();
 
 var index = Math.floor(Math.random() * options.length);
 var computerChoice = options[index];
