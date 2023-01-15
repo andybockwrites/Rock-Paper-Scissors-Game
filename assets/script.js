@@ -2,7 +2,7 @@ var wins = 0;
 var ties = 0;
 var losses = 0;
 
-var options = ["R", "P", "S"];
+var options = ["r", "p", "s"];
 
 var playGame = function() {
     var userChoice = window.prompt("Enter R, P, or S");
@@ -12,7 +12,7 @@ if (!userChoice) {
     return;
 } 
 
-if (userChoice != options) {
+if (userChoice != "r" && userChoice != "p" && userChoice != "s") {
     window.alert("Please enter a valid option:\n'r' for Rock, 'p' for Paper, or 's' for Scissors.\nLetters are not case sensitive.");
 }
 
